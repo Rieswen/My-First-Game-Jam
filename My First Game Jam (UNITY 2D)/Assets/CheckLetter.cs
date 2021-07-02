@@ -11,7 +11,7 @@ public class CheckLetter : MonoBehaviour
     public GameObject button;
     private Animator letterAnim;
     public GameObject checkSins;
-    public Text Sin;
+    public Text[] Sin;
     public ChooseDevil chooseDevil;
     public ChooseSide chooseSide;
     public bool isClicked = false;
@@ -55,13 +55,31 @@ public class CheckLetter : MonoBehaviour
             checkingThoseSins();
         }
 
-        switch (Sin.text)
+        switch (Sin[0].text)
         {
             case "Good":
                 GoodOrBad++;
                 break;
-            case "Mid Good":
-                print("no value changed");
+            case "Bad":
+                GoodOrBad--;
+                break;
+        }
+
+        switch (Sin[1].text)
+        {
+            case "Good":
+                GoodOrBad++;
+                break;
+            case "Bad":
+                GoodOrBad--;
+                break;
+        }
+
+
+        switch (Sin[2].text)
+        {
+            case "Good":
+                GoodOrBad++;
                 break;
             case "Bad":
                 GoodOrBad--;
@@ -72,9 +90,19 @@ public class CheckLetter : MonoBehaviour
     }
     public void checkingThoseSins()
     {
-        string[] Sins = new string[] { "Good", "Mid Good", "Bad" };
+        string[] Sins = new string[] { "Good", "Bad" };
         string currentText = Sins[Random.Range(0, Sins.Length)];
-        Sin.text = currentText;
+
+        string[] Sins1 = new string[] { "Good", "Bad" };
+        string currentText1 = Sins[Random.Range(0, Sins.Length)];
+
+        string[] Sins2 = new string[] { "Good", "Bad" };
+        string currentText2 = Sins[Random.Range(0, Sins.Length)];
+
+        Sin[0].text = currentText;
+        Sin[1].text = currentText1;
+        Sin[2].text = currentText2;
+
     }
 
     public void isClickedTrueOrNot()

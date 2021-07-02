@@ -121,6 +121,84 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7480811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7480814}
+  - component: {fileID: 7480813}
+  - component: {fileID: 7480812}
+  m_Layer: 5
+  m_Name: Sin3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &7480812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Killed a man with a banana
+--- !u!222 &7480813
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480811}
+  m_CullTransparentMesh: 0
+--- !u!224 &7480814
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480811}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1145674977}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.3, y: 4}
+  m_SizeDelta: {x: 181.48456, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &494354266
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,8 +358,9 @@ GameObject:
   m_Component:
   - component: {fileID: 524455180}
   - component: {fileID: 524455179}
-  - component: {fileID: 524455182}
   - component: {fileID: 524455181}
+  - component: {fileID: 524455182}
+  - component: {fileID: 524455183}
   m_Layer: 0
   m_Name: Devil
   m_TagString: Untagged
@@ -347,7 +426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 524455178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4395227, y: 1, z: 0}
+  m_LocalPosition: {x: 6.439523, y: 1, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -371,6 +450,7 @@ MonoBehaviour:
   defaultSprite: {fileID: 21300000, guid: 519f1a254cf4f47419396ab8baf99a02, type: 3}
   isClicked: 0
   isYeeted: 0
+  devil: {fileID: 21300000, guid: 0708022fa2a32f14792070fcf8333827, type: 3}
   checkLetter: {fileID: 1979364491}
   changeCharacter: {fileID: 1093721034}
 --- !u!61 &524455182
@@ -386,7 +466,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.023007572, y: 0.60971016}
+  m_Offset: {x: 0.03799987, y: 0.6009947}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -397,8 +477,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6778893, y: 1.4124535}
+  m_Size: {x: 2.2769866, y: 1.1509945}
   m_EdgeRadius: 0
+--- !u!95 &524455183
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 524455178}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b566c3353e6cc644fbbdd00b4bb5a550, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &911690607
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +781,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1982875437}
+  - {fileID: 1273269468}
+  - {fileID: 7480814}
   m_Father: {fileID: 1979364490}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -746,6 +847,84 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1145674976}
   m_CullTransparentMesh: 0
+--- !u!1 &1273269465
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1273269468}
+  - component: {fileID: 1273269467}
+  - component: {fileID: 1273269466}
+  m_Layer: 5
+  m_Name: Sin2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1273269466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273269465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Killed a man with a banana
+--- !u!222 &1273269467
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273269465}
+  m_CullTransparentMesh: 0
+--- !u!224 &1273269468
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1273269465}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1145674977}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 8.3, y: 41}
+  m_SizeDelta: {x: 181.48456, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1459888857
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,6 +1117,7 @@ GameObject:
   - component: {fileID: 1579902186}
   - component: {fileID: 1579902188}
   - component: {fileID: 1579902189}
+  - component: {fileID: 1579902190}
   m_Layer: 0
   m_Name: AngelChoice
   m_TagString: Untagged
@@ -1024,10 +1204,12 @@ MonoBehaviour:
   Human: {fileID: 1093721030}
   Button: {fileID: 911690607}
   outline: {fileID: 21300000, guid: f640ac01d3d11d64ba2b3700c86b7033, type: 3}
+  angel: {fileID: 21300000, guid: 5f46ec1878e6b9c4899d6a853c3d15f0, type: 3}
   defaultSprite: {fileID: 21300000, guid: f2685ea3fdb495b4fa71eef16f52cd92, type: 3}
   isClicked: 0
   isYeeted: 0
   checkLetter: {fileID: 1979364491}
+  changeCharacter: {fileID: 1093721034}
 --- !u!61 &1579902189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1041,7 +1223,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.025883913, y: 0.5263059}
+  m_Offset: {x: 0.019871235, y: 0.60474324}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1052,8 +1234,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.6712933, y: 1.188127}
+  m_Size: {x: 1.4490538, y: 0.8482318}
   m_EdgeRadius: 0
+--- !u!95 &1579902190
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579902185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35524cfa02231174b9be082c5a76e217, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1864174660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,7 +1451,10 @@ MonoBehaviour:
   sinsAndShit: {fileID: 1145674976}
   button: {fileID: 911690607}
   checkSins: {fileID: 1145674976}
-  Sin: {fileID: 1982875438}
+  Sin:
+  - {fileID: 1982875438}
+  - {fileID: 1273269466}
+  - {fileID: 7480812}
   chooseDevil: {fileID: 524455181}
   chooseSide: {fileID: 1579902188}
   isClicked: 0

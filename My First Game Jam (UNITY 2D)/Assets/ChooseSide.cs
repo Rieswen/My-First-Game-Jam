@@ -10,10 +10,13 @@ public class ChooseSide : MonoBehaviour
     public GameObject Button;
     private SpriteRenderer spriteRenderer;
     public Sprite outline;
+    public Sprite angel;
     public Sprite defaultSprite;
     public bool isClicked = false;
     public bool isYeeted = false;
     public CheckLetter checkLetter;
+    public ChangeCharacter changeCharacter;
+
 
     private void Start()
     {
@@ -30,7 +33,8 @@ public class ChooseSide : MonoBehaviour
         {
             print("finished");
             Button.SetActive(true);
-        } else
+        }
+        else
         {
             Button.SetActive(false);
         }
@@ -57,6 +61,7 @@ public class ChooseSide : MonoBehaviour
             print("bruh");
             anim.Play("YEETHeaven");
             yield return new WaitForSeconds(1);
+            changeCharacter.changingCharacter();
             isYeeted = true;
             isClicked = false;
             yield return new WaitForSeconds(0.1f);
@@ -68,22 +73,28 @@ public class ChooseSide : MonoBehaviour
     private void OnMouseEnter()
     {
         spriteRenderer.sprite = outline;
+        this.GetComponent<Animator>().SetBool("isHovering", true);
     }
 
     private void OnMouseExit()
     {
         spriteRenderer.sprite = defaultSprite;
+        this.GetComponent<Animator>().SetBool("isHovering", false);
     }
 
     public void OnMouseUp()
     {
         isClicked = false;
     }
+
     void OnMouseDown()
     {
         isClicked = true;
         if (checkLetter.canGivePoint == true)
         {
+            
+            Human.GetComponent<SpriteRenderer>().sprite = angel;
+
             if (checkLetter.GoodOrBad >= 0)
             {
                 checkLetter.GoodOrBad = 0;

@@ -13,6 +13,7 @@ public class ChooseDevil : MonoBehaviour
     public Sprite defaultSprite;
     public bool isClicked = false;
     public bool isYeeted = false;
+    public Sprite devil;
     public CheckLetter checkLetter;
     public ChangeCharacter changeCharacter;
 
@@ -71,11 +72,13 @@ public class ChooseDevil : MonoBehaviour
     private void OnMouseEnter()
     {
         spriteRenderer.sprite = outline;
+        this.GetComponent<Animator>().SetBool("isHovering", true);
     }
 
     private void OnMouseExit()
     {
         spriteRenderer.sprite = defaultSprite;
+        this.GetComponent<Animator>().SetBool("isHovering", false);
     }
 
     public void OnMouseUp()
@@ -87,6 +90,8 @@ public class ChooseDevil : MonoBehaviour
         isClicked = true;
         if (checkLetter.canGivePoint == true)
         {
+            Human.GetComponent<SpriteRenderer>().sprite = devil;
+
             if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1)
             {
                 if (checkLetter.GoodOrBad >= 0)
