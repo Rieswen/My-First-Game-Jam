@@ -8,6 +8,8 @@ public class ChooseSide : MonoBehaviour
     public GameObject Human;
     private Animator anim;
     public GameObject Button;
+    public AudioSource plusPoint;
+    public AudioSource minusPoint;
     private SpriteRenderer spriteRenderer;
     public Sprite outline;
     public Sprite angel;
@@ -97,12 +99,14 @@ public class ChooseSide : MonoBehaviour
 
             if (checkLetter.GoodOrBad >= 0)
             {
+                plusPoint.Play();
                 checkLetter.GoodOrBad = 0;
                 print("Welcome to heaven my child");
                 checkLetter.scorePoint = checkLetter.scorePoint + 1;
             }
             else
             {
+                minusPoint.Play();
                 checkLetter.GoodOrBad = 0;
                 print("HE WAS A BAD GUY");
                 checkLetter.scorePoint = checkLetter.scorePoint - 1;

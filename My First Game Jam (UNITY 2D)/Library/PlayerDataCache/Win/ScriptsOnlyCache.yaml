@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ChangeCharacter
     - CheckLetter
     - ChooseDevil
     - ChooseSide
@@ -52,6 +53,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -78,6 +83,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14014}
     - Class: 114
       Script: {instanceID: 14336}
+    - Class: 114
+      Script: {instanceID: 14358}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -219,7 +226,7 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
-      Hash: a297ff80c5fd4278fe25ba44d151a3c3
+      Hash: bf0158474fa7fb2bb84f1e608a966c51
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChooseSide
@@ -375,7 +382,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 30f32d55635590df57d30b289f92d789
+      Hash: bcb6d77ee1ffd51ebdcd50e9497436ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CheckLetter
@@ -495,7 +502,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: a297ff80c5fd4278fe25ba44d151a3c3
+      Hash: 1c2329386289e973da790f0eadcddc52
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ChooseDevil
@@ -573,6 +580,12 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
+      Hash: 6602216541a5694e48587dd3cae8f5af
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeCharacter
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -598,4 +611,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Rares/Desktop/To Be or To Not/My First Game Jam (UNITY 2D).exe
+  playerPath: C:/Users/Rares/Desktop/MyFirstGameJam/My First Game Jam (UNITY 2D).exe

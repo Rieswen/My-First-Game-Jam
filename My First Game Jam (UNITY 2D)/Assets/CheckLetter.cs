@@ -57,31 +57,30 @@ public class CheckLetter : MonoBehaviour
 
         switch (Sin[0].text)
         {
-            case "Good":
+            case "Has been good.":
                 GoodOrBad++;
                 break;
-            case "Bad":
+            case "Has been bad.":
                 GoodOrBad--;
                 break;
         }
 
         switch (Sin[1].text)
         {
-            case "Good":
+            case "Has been good.":
                 GoodOrBad++;
                 break;
-            case "Bad":
+            case "Has been bad.":
                 GoodOrBad--;
                 break;
         }
 
-
         switch (Sin[2].text)
         {
-            case "Good":
+            case "Has been good.":
                 GoodOrBad++;
                 break;
-            case "Bad":
+            case "Has been bad.":
                 GoodOrBad--;
                 break;
         }
@@ -90,13 +89,13 @@ public class CheckLetter : MonoBehaviour
     }
     public void checkingThoseSins()
     {
-        string[] Sins = new string[] { "Good", "Bad" };
+        string[] Sins = new string[] { "Has been good.", "Has been bad." };
         string currentText = Sins[Random.Range(0, Sins.Length)];
 
-        string[] Sins1 = new string[] { "Good", "Bad" };
+        string[] Sins1 = new string[] { "Has been good.", "Has been bad." };
         string currentText1 = Sins[Random.Range(0, Sins.Length)];
 
-        string[] Sins2 = new string[] { "Good", "Bad" };
+        string[] Sins2 = new string[] { "Has been good.", "Has been bad." };
         string currentText2 = Sins[Random.Range(0, Sins.Length)];
 
         Sin[0].text = currentText;

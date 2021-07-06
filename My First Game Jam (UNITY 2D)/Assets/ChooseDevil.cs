@@ -11,6 +11,8 @@ public class ChooseDevil : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public Sprite outline;
     public Sprite defaultSprite;
+    public AudioSource plusPoint;
+    public AudioSource minusPoint;
     public bool isClicked = false;
     public bool isYeeted = false;
     public Sprite devil;
@@ -96,12 +98,14 @@ public class ChooseDevil : MonoBehaviour
             {
                 if (checkLetter.GoodOrBad >= 0)
                 {
+                    minusPoint.Play();
                     checkLetter.GoodOrBad = 0;
                     print("wtf he was good guy you can't send him here");
                     checkLetter.scorePoint = checkLetter.scorePoint - 1;
                 }
                 else
                 {
+                    plusPoint.Play();
                     checkLetter.GoodOrBad = 0;
                     print("good choice");
                     checkLetter.scorePoint = checkLetter.scorePoint + 1;
